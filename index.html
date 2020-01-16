@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>title</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+  <title>title</title>
+</head>
+
+<body>
+  <div id="logo"></div>
   <nav>
     <div id="leftnav">
       <span>News</span>
@@ -24,26 +28,116 @@
     </div>
   </nav>
   <div id="scrollnav">
-    <div id="navlinks"></div>
+    <ul id="navlinks">
+      <li>Latest</li>
+      <li>Hard Fork</li>
+      <li>Plugged</li>
+      <li>Fundamentals</li>
+      <li>Work 2030</li>
+      <li>Readme</li>
+    </ul>
     <div id="search"></div>
     <div id="navbanner"></div>
   </div>
   <section id="top3">
-    <article></article>
-    <article></article>
-    <article></article>
+    <article id="cover">
+      <div id="gradient"></div>
+      <div class="info">
+        <div class="article-category">Apps</div>
+        <div class="title">Instagram brings DMs to the web - over 6 years after they arrived on mobile</div>
+        <div class="author">by Rachel Kaser</div>
+      </div>
+    </article>
+    <article>
+      <div class="info">
+        <div class="article-category">Tech</div>
+        <div class="title">Scientists used stem cells to create a new life-form: Organic robots</div>
+        <div class="author">by Tristan Greene</div>
+      </div>
+    </article>
+    <article>
+      <div class="info">
+        <div class="article-category">Apps</div>
+        <div class="title">Facebook now sends you a notification when you log in to third-party sites</div>
+        <div class="author">by Rachel Kaser</div>
+      </div>
+    </article>
   </section>
   <section id="latest">
     <h1>Latest news</h1>
     <div id="latest-articles">
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
+      <article>
+        <div class="imgwrapper" style="background-image: url('./images/google.jpeg')"></div>
+        <div class="title">Google may soon let you record phone calls on Android</div>
+        <span class="credit">
+          <div class="author">Napier Lopez</div>
+          <div class="separator"></div>
+          <div class="published">41 minutes ago</div>
+        </span>
+      </article>
+      <article>
+        <div class="imgwrapper" style="background-image: url('./images/harold.jpg')"></div>
+        <div class="title">Hide the Pain Harold is the meme of the decade (according to Imgur)</div>
+        <span class="credit">
+          <div class="author">Mix</div>
+          <div class="separator"></div>
+          <div class="published">7 hours ago</div>
+        </span>
+      </article>
+      <article>
+        <div class="imgwrapper" style="background-image: url('./images/petro.jpeg')"></div>
+        <div class="title">Nicolas Maduro tries to revive failed state-issued cryptocurrency Petro — AGAIN</div>
+        <span class="credit">
+          <div class="author">Yessi Bello Perez</div>
+          <div class="separator"></div>
+          <div class="published">8 hours ago</div>
+        </span>
+      </article>
+      <article>
+        <div class="imgwrapper" style="background-image: url('./images/meditator.jpg')"></div>
+        <div class="title">Video: We used brain-scanning headbands to have a meditation battle</div>
+        <span class="credit">
+          <div class="author">Callum Booth</div>
+          <div class="separator"></div>
+          <div class="published">8 hours ago</div>
+        </span>
+      </article>
+      <article>
+        <div class="imgwrapper" style="background-image: url('./images/instagram.jpg')"></div>
+        <div class="title">Instagram's decision to hide photoshopped images is a disservice to art</div>
+        <span class="credit">
+          <div class="author">Mix</div>
+          <div class="separator"></div>
+          <div class="published">8 hours ago</div>
+        </span>
+      </article>
+      <article>
+        <div class="imgwrapper" style="background-image: url('./images/bitcoin.jpeg')"></div>
+        <div class="title">Filipino billionaire denies endorsing Bitcoin 'scam'</div>
+        <span class="credit">
+          <div class="author">Yessi Bello Perez</div>
+          <div class="separator"></div>
+          <div class="published">8 hours ago</div>
+        </span>
+      </article>
+      <article>
+        <div class="imgwrapper" style="background-image: url('./images/censorship.jpg')"></div>
+        <div class="title">Study: North Korea, China, and Russia top internet censorship charts</div>
+        <span class="credit">
+          <div class="author">Ivan Mehta</div>
+          <div class="separator"></div>
+          <div class="published">9 hours ago</div>
+        </span>
+      </article>
+      <article>
+        <div class="imgwrapper" style="background-image: url('./images/immune.jpg')"></div>
+        <div class="title">Here's how body clock cycles affect our immune system</div>
+        <span class="credit">
+          <div class="author">The Coversation</div>
+          <div class="separator"></div>
+          <div class="published">10 hours ago</div>
+        </span>
+      </article>
     </div>
   </section>
   <section id="indexco">
@@ -99,5 +193,6 @@
     </div>
   </footer>
   <script type="text/javascript" src="script.js"></script>
-  </body>
+</body>
+
 </html>

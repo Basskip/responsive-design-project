@@ -5,6 +5,7 @@
 
 body {
   min-width: 500px;
+  background: linear-gradient(to bottom, #ececec, #fff 10%);
 }
 
 /* Static navbar */
@@ -12,8 +13,12 @@ body {
 nav {
   width: 100%;
 
-  height: 1rem;
+  height: 32px;
+  line-height: 32px;
   background-color: black;
+  
+  font-family: sans-serif;
+  font-size: 12px;
 }
 
 #leftnav,
@@ -21,17 +26,67 @@ nav {
   display: inline-block;
   height: 100%;
   color: grey;
+
+  margin: 0 15px;
+}
+
+nav span {
+  margin: 0 5px;
 }
 
 #rightnav {
   float: right;
 }
 
+#logo {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  #logo {
+    display: block;
+    float: left;
+    width: 106px;
+    height: 80px;
+    background-image: radial-gradient(at top left, purple, red 100%);
+  }
+
+  nav {
+    width: calc(100% - 106px);
+    float: right;
+  }
+}
+
 /* Fixed navbar */
 
 #scrollnav {
-  height: 3rem;
-  border: 1px solid red;
+  height: 48px;
+  background-color: white;
+}
+
+#navlinks {
+  list-style: none;
+  padding: 0;
+  padding-left: 10px;
+}
+
+#navlinks > li {
+  display: inline-block;
+  line-height: 48px;
+  
+  color: #aaa;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+@media (max-width: 1024px) {
+  #scrollnav {
+    float: right;
+    width: calc(100% - 106px);
+  }
 }
 
 /* html:not([data-scroll='0']) body {
@@ -53,14 +108,85 @@ html:not([data-scroll='0']) #scrollnav {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  clear: both;
+  margin: 10px;
 }
 
-#top3 article:first-child {
+#top3 article .info{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0) 100%);
+}
+
+#top3 .article-category {
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.719);
+}
+
+#top3 .author {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+
+#cover {
   grid-row: span 2;
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/instaDMs1-796x417.png") no-repeat center;
+  background-size: cover;
+}
+
+#top3 .title {
+  font-family: Avalon, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+#cover .title {
+  font-size: 56px;
+}
+
+#top3 article:nth-child(2) {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/Quadruped-800x534-796x531.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#top3 article:nth-child(3) {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/facebook-796x417.png") no-repeat center;
+  background-size: cover;
+}
+
+#gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(at top left, red, rgba(255, 255, 255, 0) 60%);
 }
 
 #top3 article {
-  border: 1px solid pink;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  #gradient {
+    display: none;
+  }
+
+  #cover .title {
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -69,9 +195,23 @@ html:not([data-scroll='0']) #scrollnav {
     height: auto;
   }
 
+  #top3 .title {
+    font-size: 20px;
+  }
+
   #top3 article {
     height: 260px;
+    margin: 10px;
   }
+}
+
+/* Headers */
+
+h1 {
+  color: #f42;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 28px;
 }
 
 /* Latest news */
@@ -85,12 +225,45 @@ html:not([data-scroll='0']) #scrollnav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   grid-auto-rows: 1fr;
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 
-#latest-articles article {
-  height: 250px;
-  border: 1px solid green;
+#latest-articles article .imgwrapper {
+  width: 100%;
+  padding-top: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+#latest-articles article .title {
+  margin: 5px 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+}
+
+#latest-articles article .credit {
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  margin: 5px 0;
+}
+
+#latest-articles article .author,
+#latest-articles article .published {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.separator {
+  content: "";
+  width: 2px;
+  height: 2px;
+  background-color: #aaa;
+  border-radius: 100%;
+  margin: 0 5px;
 }
 
 @media (max-width: 768px) {
@@ -99,7 +272,16 @@ html:not([data-scroll='0']) #scrollnav {
   }
 
   #latest-articles article {
-    height: 72px;
+    display: block;
+    clear: both;
+  }
+
+  #latest-articles article .imgwrapper {
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin: 0 10px 10px 10px;
+    padding: 0;
   }
 }
 
@@ -108,6 +290,7 @@ html:not([data-scroll='0']) #scrollnav {
 #indexco {
   max-width: 1150px;
   margin: 0 auto;
+  clear: both;
 }
 
 #indexgrid {
@@ -182,6 +365,10 @@ html:not([data-scroll='0']) #scrollnav {
 @media (max-width: 768px) {
   #deals {
     display: block;
+  }
+
+  #deals h2 {
+    position: static;  
   }
 
   .deal {
